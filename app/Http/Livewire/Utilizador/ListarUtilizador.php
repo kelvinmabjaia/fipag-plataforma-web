@@ -6,12 +6,14 @@ use Livewire\Component;
 
 class ListarUtilizador extends Component
 {
+
     protected $listeners = [
-        'actualizarListaUtilizadores'
+        'closeCreateModal'
     ];
 
-    public function actualizarListaUtilizadores(){
-        $this->emit('closeModal');
+    public function closeCreateModal(){
+        session()->flash('success', 'Utilizador criado com sucesso!'); // Alerta de Sucesso
+        $this->dispatchBrowserEvent('closeCreateModal'); 
     }
 
     public function render()

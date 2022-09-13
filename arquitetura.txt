@@ -1,0 +1,21 @@
+[Utilizador]
+-nome
+-email
+-departamento
+-cargo
+-senha
+
+[Departamento]
+-departamento
+-utilizador
+-orcamento
+
+[Processo]
+-referencia
+-nr processo
+-data submissao
+-finalidade
+-tipo de pedido
+-orcamento requisitado
+-prazo do pedido
+...

@@ -24,8 +24,11 @@
             </li>
             {{-- Lista de Pocessos --}}
             <li class="nav-item pb-3">
-                <a class="nav-link {{ Route::currentRouteName() == 'tables' ? 'active' : '' }}"
-                    href="{{ route('tables') }}">
+
+                <?php $collapse = in_array(Route::currentRouteName(), array('avaliar-processo', 'listar-processo')); ?>
+
+                <a class="nav-link {{ $collapse == 'tables' ? 'active' : '' }}"
+                    href="{{ route('listar-processo') }}">
                     <div
                         class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-copy-04 text-sm opacity-10" aria-hidden="true"></i>
@@ -42,7 +45,7 @@
             {{-- Menu Gestão --}}
             <li class="nav-item">
 
-                <?php $collapse = in_array(Route::currentRouteName(), array('user-profile', 'billing', 'listar-utilizador')); ?>
+                <?php $collapse = in_array(Route::currentRouteName(), array('listar-regiao', 'billing', 'listar-utilizador')); ?>
 
                 <a data-bs-toggle="collapse" href="#menuGestao" aria-controls="menuGestao" role="button" 
                     aria-expanded="{{ $collapse ? 'true' : 'false' }}" 
@@ -63,8 +66,8 @@
 
                         {{-- Lista de Regiões --}}
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'user-profile' ? 'active' : '' }}"
-                                href="{{ route('user-profile') }}">
+                            <a class="nav-link {{ Route::currentRouteName() == 'listar-regiao' ? 'active' : '' }}"
+                                href="{{ route('listar-regiao') }}">
                                 <span class="nav-link-text ms-1">Região</span>
                             </a>
                         </li>

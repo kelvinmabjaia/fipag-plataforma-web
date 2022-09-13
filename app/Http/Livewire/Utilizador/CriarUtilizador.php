@@ -2,10 +2,9 @@
 
 namespace App\Http\Livewire\Utilizador;
 
-use Livewire\Component;
-
 use App\Models\User;
 
+use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
 
 class CriarUtilizador extends Component
@@ -13,7 +12,7 @@ class CriarUtilizador extends Component
     public User $user;
 
     protected $rules = [
-        'user.name' => 'required|string|min:6',
+        'user.name' => 'required|string|min:3',
         'user.email' => 'required|string|max:500',
     ];
 
@@ -29,8 +28,9 @@ class CriarUtilizador extends Component
 
         $this->user = new User();
 
-        $this->emit('actualizarListaUtilizadores');
-        $this->emit('closeModal');
+        $this->emit('refreshDatatable', 'livewire.utilizador.tabela-utilizador'); // Actualizar Tabela Utilizador
+        $this->emit('closeCreateModal', 'livewire.utilizador.listar-utilizador'); // Fechar Modal Criar Utilizador
+        
     }
     
     public function render() {

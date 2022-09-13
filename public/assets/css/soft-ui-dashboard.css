@@ -5323,8 +5323,7 @@ textarea.form-control-lg {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color:#21d4fd;
-  border-color: #2152ff;
+  background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
 }
 .page-item.disabled .page-link {
   color: #6c757d;

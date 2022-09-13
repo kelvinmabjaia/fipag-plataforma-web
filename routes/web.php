@@ -16,8 +16,16 @@ use App\Http\Livewire\Rtl;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 
-use App\Http\Livewire\Utilizador\ListarUtilizador;
+/** Região */
+use App\Http\Livewire\Regiao\ListarRegiao;
+
+/** Utilizador */
 use App\Http\Livewire\Utilizador\CriarUtilizador;
+use App\Http\Livewire\Utilizador\ListarUtilizador;
+
+/** Processo */
+use App\Http\Livewire\Processo\AvaliarProcesso;
+use App\Http\Livewire\Processo\ListarProcesso;
 
 use Illuminate\Http\Request;
 
@@ -50,10 +58,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/tables', Tables::class)->name('tables');
     Route::get('/static-sign-in', StaticSignIn::class)->name('sign-in');
     Route::get('/static-sign-up', StaticSignUp::class)->name('static-sign-up');
-    Route::get('/rtl', Rtl::class)->name('rtl');
+    // Route::get('/rtl', Rtl::class)->name('rtl');
     Route::get('/laravel-user-profile', UserProfile::class)->name('user-profile');
+
+    // Região
+    Route::get('/regiao', ListarRegiao::class)->name('listar-regiao');
 
     // Utilizador
     Route::get('/utilizador', ListarUtilizador::class)->name('listar-utilizador');
+
+    // Processo
+    Route::get('/processo', ListarProcesso::class)->name('listar-processo');
+    Route::get('/avaliar-processo', AvaliarProcesso::class)->name('avaliar-processo');
 });
 

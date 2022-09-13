@@ -11,7 +11,7 @@
             <div class="card p-4">
 
                 <div class="d-flex mb-4 flex-row justify-content-between">
-                    <h5 class="mb-0">Utilizadores</h5>
+                    <h5 class="mb-0">Processos</h5>
 
                     <button type="button" class="btn bg-gradient-info btn-icon" data-bs-toggle="modal" data-bs-target="#modal-criar-utilizador">
                         <span class="btn-inner--icon"><i class="fa fa-plus"></i></span>
@@ -21,7 +21,7 @@
                 </div>
                 
                 {{-- Tabela de Utilizadores --}}
-                <livewire:utilizador.tabela-utilizador />
+                <livewire:processo.tabela-processo />
 
                 <div class="col-md-4">
 
