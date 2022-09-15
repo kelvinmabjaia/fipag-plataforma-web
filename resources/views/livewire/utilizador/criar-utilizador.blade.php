@@ -5,11 +5,11 @@
         <div class="row mt-3">
             <div class="col-12 col-sm-6">
                 <label>Nome</label>
-                <input wire:model="user.name" class="form-control" type="text" placeholder="ex. Messias"> <!-- onfocus="focused(this)" onfocusout="defocused(this)" -->
+                <input wire:model="nome" class="form-control" type="text" placeholder="ex. Messias"> <!-- onfocus="focused(this)" onfocusout="defocused(this)" -->
             </div>
             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                 <label>Apelido</label>
-                <input value="{{ $user->name ?? '' }}"  class="form-control" type="text" placeholder="ex. Macamo">
+                <input wire:model="apelido" class="form-control" type="text" placeholder="ex. Macamo">
             </div>
         </div>
     
@@ -23,11 +23,11 @@
         <div class="row mt-3">
             <div class="col-12 col-sm-6">
                 <label>Senha</label>
-                <input disabled class="form-control" type="text" placeholder="ex. Messias">
+                <input wire:model="password" class="form-control" type="password" placeholder="******">
             </div>
             <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                 <label>Confirmar senha</label>
-                <input value="{{ $user->password ?? '' }}" class="form-control" type="text" placeholder="******">
+                <input wire:model="confirmar" class="form-control" type="password" placeholder="******">
             </div>
         </div>
     

@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use App\Models\Regiao;
+
 return new class extends Migration
 {
     /**
@@ -13,16 +15,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('processos', function (Blueprint $table) {
+        Schema::create('departamentos', function (Blueprint $table) {
             $table->id();
-            $table->string('referencia')->unique();
-            $table->string('nr')->unique();
-            $table->string('finalidade');
-            $table->enum('tipo_pedido', ['normal', 'urgente'])->default('normal');
-            $table->enum('estado', ['none', 'rej', 'apr', 'enc'])->default('none');;
+            $table->string('departamento');
             $table->float('orcamento', $scale = 2);
-            $table->date('data_submissao');
-            $table->date('data_prazo');
+            $table->foreignIdFor(Regiao::class);
+            $table->string('criado_por');
+            $table->string('actualizado_por');
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processos');
+        Schema::dropIfExists('departamentos');
     }
 };

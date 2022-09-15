@@ -33,6 +33,8 @@ class TabelaProcesso extends DataTableComponent
                 ->searchable(),
             Column::make('Finalidade', 'finalidade')
                 ->searchable(),
+            Column::make('Tipo de Pedido', 'tipo_pedido')
+                ->searchable(),
             Column::make('Orçamentso pedido', 'orcamento')
                 ->sortable()
                 ->searchable(),

@@ -16,6 +16,14 @@ use App\Http\Livewire\Rtl;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 
+/** Departamento */
+use App\Http\Livewire\Departamento\CriarDepartamento;
+use App\Http\Livewire\Departamento\ListarDepartamento;
+
+/** Processo */
+use App\Http\Livewire\Processo\AvaliarProcesso;
+use App\Http\Livewire\Processo\ListarProcesso;
+
 /** Região */
 use App\Http\Livewire\Regiao\ListarRegiao;
 
@@ -23,9 +31,7 @@ use App\Http\Livewire\Regiao\ListarRegiao;
 use App\Http\Livewire\Utilizador\CriarUtilizador;
 use App\Http\Livewire\Utilizador\ListarUtilizador;
 
-/** Processo */
-use App\Http\Livewire\Processo\AvaliarProcesso;
-use App\Http\Livewire\Processo\ListarProcesso;
+
 
 use Illuminate\Http\Request;
 
@@ -52,7 +58,10 @@ Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-passwo
 Route::get('/reset-password/{id}', ResetPassword::class)->name('reset-password')->middleware('signed');
 
 Route::middleware('auth')->group(function () {
+
+    // Dashboard
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    
     Route::get('/billing', Billing::class)->name('billing');
     Route::get('/profile', Profile::class)->name('profile');
     Route::get('/tables', Tables::class)->name('tables');
@@ -61,14 +70,19 @@ Route::middleware('auth')->group(function () {
     // Route::get('/rtl', Rtl::class)->name('rtl');
     Route::get('/laravel-user-profile', UserProfile::class)->name('user-profile');
 
+    // Departamento
+    Route::get('/departamento', ListarDepartamento::class)->name('listar-departamento');
+
+    // Processo
+    Route::get('/avaliar-processo', AvaliarProcesso::class)->name('avaliar-processo');
+    Route::get('/processo', ListarProcesso::class)->name('listar-processo');
+
     // Região
     Route::get('/regiao', ListarRegiao::class)->name('listar-regiao');
 
     // Utilizador
     Route::get('/utilizador', ListarUtilizador::class)->name('listar-utilizador');
 
-    // Processo
-    Route::get('/processo', ListarProcesso::class)->name('listar-processo');
-    Route::get('/avaliar-processo', AvaliarProcesso::class)->name('avaliar-processo');
+    
 });
 

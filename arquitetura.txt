@@ -1,14 +1,15 @@
 [Utilizador]
 -nome
 -email
--departamento
--cargo
+---departamento
+---cargo
 -senha
 
 [Departamento]
 -departamento
 -utilizador
 -orcamento
+---regiao
 
 [Processo]
 -referencia
@@ -16,6 +17,7 @@
 -data submissao
 -finalidade
 -tipo de pedido
+-estado
 -orcamento requisitado
 -prazo do pedido
-...
+---departamento

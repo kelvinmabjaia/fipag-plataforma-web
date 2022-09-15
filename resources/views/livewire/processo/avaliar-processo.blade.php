@@ -54,7 +54,7 @@
 
                                     <h3 class="text-start">Estado do Processo</h3>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12">
 
                                         <div class="row mt-5 mb-3 text-start">
                                             <div class="col-md-6">
@@ -148,7 +148,7 @@
                         
                         <div class="row">
 
-                            <div class="col-5" style="border-right: 1px dotted grey;">
+                            <div class="col-md-5 col-sm-12" style="border-right: 1px dotted grey;">
                             
                                 <div class="row">
                                     <h5 class="mb-3 text-start"> Anexos </h5>
@@ -220,7 +220,7 @@
     
                             </div>
     
-                            <div class="col-7 px-5 text-center">
+                            <div class="col-md-7 col-sm-12 px-5 text-center">
                                 <h5> Pré-visualização </h5>
 
                                 <style>
@@ -234,7 +234,7 @@
                                 </style>
                                 <br />
                                 <div>
-                                    <iframe style="border: 0; border-radius: 6px;" src="@Url.Content("~/Content/"+@Model.pasta+""+@Model.nome_ficheiro+"")" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                                    <iframe style="border: 0; border-radius: 6px;" src=""></iframe>
                                 </div>
 
                                 <div class="text-end">

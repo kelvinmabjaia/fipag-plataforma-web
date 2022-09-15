@@ -45,7 +45,7 @@
             {{-- Menu Gestão --}}
             <li class="nav-item">
 
-                <?php $collapse = in_array(Route::currentRouteName(), array('listar-regiao', 'billing', 'listar-utilizador')); ?>
+                <?php $collapse = in_array(Route::currentRouteName(), array('listar-regiao', 'listar-departamento', 'listar-utilizador')); ?>
 
                 <a data-bs-toggle="collapse" href="#menuGestao" aria-controls="menuGestao" role="button" 
                     aria-expanded="{{ $collapse ? 'true' : 'false' }}" 
@@ -74,8 +74,8 @@
 
                         {{-- Lista de Departamentos --}}
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'billing' ? 'active' : '' }}"
-                                href="{{ route('billing') }}">
+                            <a class="nav-link {{ Route::currentRouteName() == 'listar-departamento' ? 'active' : '' }}"
+                                href="{{ route('listar-departamento') }}">
                                 <span class="nav-link-text ms-1">Departamento</span>
                             </a>
                         </li>
