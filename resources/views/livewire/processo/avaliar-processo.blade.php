@@ -101,7 +101,12 @@
                                             <h6 class="text-secondary mb-0">Tipo de Pedido:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                            <h6 class="text-dark mb-0">{{ $processo->tipo_pedido }}</h6>
+                                                <h6 class="text-dark mb-0">
+                                                    <span class="badge badge-secondary">
+                                                        {{ $processo->tipo_pedido }}
+                                                    </span>
+                                                </h6>
+                                                
                                             </div>
                                         </div>
 
@@ -148,7 +153,7 @@
                         
                         <div class="row">
 
-                            <div class="col-md-5 col-sm-12" style="border-right: 1px dotted grey;">
+                            <div class="col-md-5 col-sm-12" style="border-right: 1px dotted white;">
                             
                                 <div class="row">
                                     <h5 class="mb-3 text-start"> Anexos </h5>
@@ -220,33 +225,37 @@
     
                             </div>
     
-                            <div class="col-md-7 col-sm-12 px-5 text-center">
-                                <h5> Pré-visualização </h5>
+                            <!-- 
+                                <div class="col-md-7 col-sm-12 px-5 text-center">
+                                    <h5> Pré-visualização </h5>
 
-                                <style>
-                                    iframe {
-                                        display: block;
-                                        background: white;
-                                        border: none;
-                                        height: 512px;
-                                        width: 256px;
-                                    }
-                                </style>
-                                <br />
-                                <div>
-                                    <iframe style="border: 0; border-radius: 6px;" src=""></iframe>
-                                </div>
+                                    <style>
+                                        iframe {
+                                            display: block;
+                                            background: white;
+                                            border: none;
+                                            height: 512px;
+                                            width: 256px;
+                                        }
+                                    </style>
+                                    <br />
+                                    <div>
+                                        <iframe style="border: 0; border-radius: 6px;" src=""></iframe>
+                                    </div>
 
-                                <div class="text-end">
-                                    <button class="btn btn-icon btn-sm btn-outline-dark" type="button">
-                                      <span class="btn-inner--text">Imprimir</span>
-                                    </button>
+                                    <div class="text-end">
+                                        <button class="btn btn-icon btn-sm btn-outline-dark" type="button">
+                                        <span class="btn-inner--text">Imprimir</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            -->
+
                         </div>
                         
                     </div>
 
+                    <!-- 
                     <div class="card-footer mt-5">
                         <div class="row">
                             <div class="col-lg-5 text-left">
@@ -260,6 +269,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
             </form>
             </div>

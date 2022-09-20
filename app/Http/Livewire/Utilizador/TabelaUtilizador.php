@@ -29,6 +29,9 @@ class TabelaUtilizador extends DataTableComponent
             Column::make('Email ')
                 ->sortable()
                 ->searchable(),
+            Column::make('Cargo', 'cargo.cargo')
+                ->sortable()
+                ->searchable(),
             Column::make('Criado em', 'created_at')
                 ->sortable()
                 ->searchable(),

@@ -26,6 +26,9 @@ class TabelaRegiao extends DataTableComponent
             Column::make('Região', 'regiao')
                 ->sortable()
                 ->searchable(),
+            Column::make('Orçamento Geral', 'orcamento')
+                ->sortable()
+                ->searchable(),
         ];
     }
 

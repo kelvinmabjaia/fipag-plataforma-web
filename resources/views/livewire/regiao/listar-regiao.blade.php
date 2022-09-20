@@ -5,7 +5,7 @@
             <div class="card p-4">
 
                 <div class="d-flex mb-4 flex-row justify-content-between">
-                    <h5 class="mb-0">Regiões</h5>
+                    <h5 class="mb-0">Orçamento Geral / Região</h5>
 
                     <!--
                         <button type="button" class="btn bg-gradient-info btn-icon" data-bs-toggle="modal" data-bs-target="#modal-criar-utilizador">

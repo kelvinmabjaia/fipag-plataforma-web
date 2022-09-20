@@ -5383,6 +5383,37 @@ textarea.form-control-lg {
   vertical-align: baseline;
   border-radius: 0.45rem;
 }
+
+.badge-info {
+  color: #08a1c4;
+  background-color: #abe9f7;
+}
+
+.badge-secondary {
+  color: #5974a2;
+  background-color: #e4e8ed;
+}
+
+.badge-dark {
+  color: #1e2e4a;
+  background-color: #8097bf;
+}
+
+.badge-success {
+  color: #67b108;
+  background-color: #cdf59b;
+}
+
+.badge-warning {
+  color: #fbc400;
+  background-color: #fef5d3;
+}
+
+.badge-danger {
+  color: #bd0000;
+  background-color: #fc9797;
+}
+
 .badge:empty {
   display: none;
 }
