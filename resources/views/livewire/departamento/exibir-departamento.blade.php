@@ -78,7 +78,7 @@
     
                             <h6 class="mb-3">Histórico</h6>
     
-                            <div class="timeline timeline-one-side">
+                            <div class="timeline timeline-one-side overflow-auto" style="max-height: 360px;">
     
                                 <div class="timeline-block mb-3">
                                     <span class="timeline-step">
