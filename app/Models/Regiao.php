@@ -10,11 +10,11 @@ class Regiao extends Model
     use HasFactory;
 
     protected $table = "regioes";
-
     protected $guarded = [];
 
     public function departamentos()
     {
         return $this->hasMany(Departamento::class);
     }
+
 }

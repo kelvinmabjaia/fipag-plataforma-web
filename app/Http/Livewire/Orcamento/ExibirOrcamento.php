@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Orcamento;
 
 use App\Models\Regiao;
-
 use Livewire\Component;
 
 class ExibirOrcamento extends Component
@@ -12,7 +11,7 @@ class ExibirOrcamento extends Component
 
     public function mount()
     {
-        $this->regiao = Regiao::find(1)->first();
+        $this->regiao = Regiao::where('id', 2)->first();
     }
 
     public function render()

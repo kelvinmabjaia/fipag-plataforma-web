@@ -15,4 +15,5 @@ class Departamento extends Model
     {
         return $this->belongsTo(Regiao::class, 'regiao_id', 'id');
     }
+    
 }

@@ -11,7 +11,7 @@
                         <ul class="list-group">
                             <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                             <div class="d-flex flex-column">
-                            <h1 class="mb-3 text-sm">Região {{ $regiao->regiao }}</h1>
+                            <h5 class="mb-3 text-md">{{ $departamento->departamento }}</h5>
                             <span class="mb-2 text-xs">Director: <span class="text-dark font-weight-bold ms-2">Viking Burrito</span></span>
                             <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-2 font-weight-bold">oliver@burrito.com</span></span>
                             </div>
@@ -25,9 +25,9 @@
 
                         <!-- Orçamento Geral -->
                         <div class="d-flex justify-content-between">
-                            <span class="mb-2 text-sm"> Orçamento Geral: </span>
+                            <span class="mb-2 text-sm"> Orçamento do Centro de Custo: </span>
                             <span class="text-secondary font-weight-bold ms-2">
-                                {{ number_format($regiao->orcamento, 2) }} MT
+                                {{ number_format($departamento->orcamento, 2) }} MT
                             </span>
                         </div>
 
@@ -35,7 +35,7 @@
                         <div class="d-flex justify-content-between">
                             <span class="mb-2 text-sm"> Orçamento Alocado: </span>
                             <span class="text-secondary font-weight-bold ms-2">
-                                {{ number_format($regiao->departamentos->sum('orcamento'), 2) }} MT
+                               <!-- { number_format($departamento->processo->sum('orcamento'), 2) }} --> MT 
                             </span>
                         </div>
 
@@ -43,7 +43,7 @@
                         <div class="d-flex justify-content-between mt-4">
                             <span class="mb-2 text-lg"> Disponível: </span>
                             <span class="text-dark text-lg ms-2 font-weight-bold">
-                                {{ number_format($regiao->orcamento - $regiao->departamentos->sum('orcamento'), 2) }} MT
+                               <!-- { number_format($regiao->orcamento - $regiao->departamentos->sum('orcamento'), 2) }} --> MT
                             </span>
                         </div>
                     </div>
@@ -112,9 +112,9 @@
                     </div>
 
                     <div class="col-12 col-md-9 col-sm-12">
-                        <h6 class="mb-3">Centro de Curto</h6>
-                        {{-- Tabela de Departamentos --}}
-                        <livewire:departamento.tabela-departamento :regiao="$regiao->id"  />
+                        <h6 class="mb-3">Processos</h6>
+                        {{-- Tabela de Processos :departalento="$departamento->id"   --}}
+                        <livewire:processo.tabela-processo />
                     </div>
 
                 </div>

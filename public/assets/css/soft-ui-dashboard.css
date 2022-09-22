@@ -9428,7 +9428,7 @@ textarea.form-control-lg {
 }
 
 .text-success {
-  color: #82d616 !important;
+  color: #589d00 !important;
 }
 
 .text-info {
@@ -9436,11 +9436,11 @@ textarea.form-control-lg {
 }
 
 .text-warning {
-  color: #fbcf33 !important;
+  color: #cf7301 !important;
 }
 
 .text-danger {
-  color: #ea0606 !important;
+  color: #D60808 !important;
 }
 
 .text-light {
@@ -22772,6 +22772,7 @@ hr.horizontal.gray-light {
   font-weight: 600;
   z-index: 1;
 }
+
 .timeline-step svg, .timeline-step i {
   line-height: 1.4;
 }
