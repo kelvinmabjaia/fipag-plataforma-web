@@ -7,7 +7,7 @@
 
                 <div class="d-flex justify-content-between bd-highlight">
 
-                    <a class="btn btn-outline-secondary" href="{{ route('listar-processo') }}">
+                    <a class="btn btn-outline-secondary" href="{{ url()->previous() }}">
                         <span><i class="fa fa-chevron-left fa-lg mt-1" aria-hidden="true"></i></span>
                     </a>
     
@@ -19,7 +19,7 @@
                                 Rejeitar
                             </button>
 
-                            <button type="button" class="btn bg-gradient-info mx-1">
+                            <button type="button" class="btn bg-gradient-success mx-1">
                                 <span class="pe-2 mt-3"><i class="fas fa-check fa-lg mt-1" aria-hidden="true"></i></span>
                                 Aprovar
                             </button>
@@ -36,6 +36,7 @@
                 
             </div>
         </div>
+        
     </div>
 
     <div class="container-fluid">
@@ -79,7 +80,9 @@
                                                 <h6 class="text-secondary mb-0">Data de Submissao:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6 class="text-dark mb-0">{{ $processo->data_submissao }}</h6>
+                                                <h6 class="text-dark mb-0">
+                                                    {{ Carbon\Carbon::parse( $processo->data_submissao )->format('d-m-Y'); }}
+                                                </h6>
                                             </div>
                                         </div>
 
@@ -88,7 +91,9 @@
                                                 <h6 class="text-secondary mb-0">Prazo do Pedido:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6 class="text-dark mb-0">{{ $processo->data_prazo }}</h6>
+                                                <h6 class="text-dark mb-0">
+                                                    {{ Carbon\Carbon::parse( $processo->data_prazo )->format('d-m-Y'); }}
+                                                </h6>
                                             </div>
                                         </div>
 
@@ -115,16 +120,23 @@
                                                 <h6 class="text-secondary mb-0">Orçamento Requisitado:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6 class="text-dark mb-0">MT {{ $processo->orcamento }}</h6>
+
+                                                @if ( $processo->orcamento < $processo->departamento->orcamento )
+                                                    <?php $text_class = 'text-success' ?>
+                                                @else
+                                                    <?php $text_class = 'text-danger' ?>
+                                                @endif
+
+                                                <h6 class="mb-0 {{ $text_class }}">{{ number_format($processo->orcamento, 2) }} MT</h6>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3 text-start">
                                             <div class="col-md-6">
-                                                <h6 class="text-secondary mb-0">Orçamento Geral:</h6>
+                                                <h6 class="text-secondary mb-0">Orçamento do Centro de Custo:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6 class="text-dark mb-0">MT ---</h6>
+                                                <h6 class="text-dark mb-0">{{ number_format($processo->departamento->orcamento, 2) }} MT</h6>
                                             </div>
                                         </div>
 
@@ -133,7 +145,7 @@
                                                 <h6 class="text-secondary mb-0">Finalidade:</h6>
                                             </div>
                                             <div class="col-md-6">
-                                                <h6 class="text-dark mb-0">{{ Illuminate\Support\Str::limit($processo->finalidade, 50)  }}</h6>
+                                                <h6 class="text-dark mb-0">{{ $processo->finalidade }}</h6>
                                             </div>
                                         </div>
 
@@ -146,8 +158,6 @@
                         </div>
 
                     </div>
-
-                    <br>
 
                     <div class="card-body">
                         

@@ -12,9 +12,7 @@ class Regiao extends Model
     protected $table = "regioes";
     protected $guarded = [];
 
-    public function departamentos()
-    {
-        return $this->hasMany(Departamento::class);
-    }
+    // REGIÃO POSSUI ...
+    public function departamentos() { return $this->hasMany(Departamento::class); }
 
 }

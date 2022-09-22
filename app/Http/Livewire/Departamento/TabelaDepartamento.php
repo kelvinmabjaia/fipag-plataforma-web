@@ -6,7 +6,6 @@ use App\Models\Departamento;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use Maatwebsite\Excel\Facades\Excel;
 
 class TabelaDepartamento extends DataTableComponent
 {

@@ -13,7 +13,7 @@ class ExibirProcesso extends Component
     public function mount()
     {
         if ($this->p != null)
-            $this->processo = Processo::find($this->p)->first();
+            $this->processo = Processo::where('id', $this->p)->first();
     }
 
     public function render()

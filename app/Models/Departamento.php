@@ -11,9 +11,10 @@ class Departamento extends Model
 
     protected $guarded = [];
 
-    public function regiao()
-    {
-        return $this->belongsTo(Regiao::class, 'regiao_id', 'id');
-    }
+    // DEPARTAMENTO PERTENCE A ...
+    public function regiao() { return $this->belongsTo(Regiao::class); }
+
+    // DEPARTAMENTO POSSUI ...
+    public function processos() { return $this->hasMany(Processo::class); }
     
 }

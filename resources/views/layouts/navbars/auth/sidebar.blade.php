@@ -23,10 +23,10 @@
                 </a>
             </li>
 
-            {{-- Lista de Pocessos --}}
+            {{-- Orcamento --}}
             <li class="nav-item pb-3">
 
-                <?php $collapse = in_array(Route::currentRouteName(), array('exibir-orcamento')); ?>
+                <?php $collapse = in_array(Route::currentRouteName(), array('exibir-orcamento', 'exibir-departamento')); ?>
 
                 <a class="nav-link {{ $collapse == 'tables' ? 'active' : '' }}"
                     href="{{ route('exibir-orcamento') }}">

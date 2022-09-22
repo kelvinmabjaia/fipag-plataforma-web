@@ -7,14 +7,13 @@ use Livewire\Component;
 
 class ExibirDepartamento extends Component
 {
-
     public Departamento $departamento;
     public $d; protected $queryString = ['d'];
 
     public function mount()
     {
         if($this->d != null)
-            $this->departamento = Departamento::find($this->d)->first();
+            $this->departamento = Departamento::where('id', $this->d)->first();
     }
 
     public function render()

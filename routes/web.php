@@ -14,14 +14,11 @@ use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Departamento\CriarDepartamento;
 use App\Http\Livewire\Departamento\ExibirDepartamento;
 
-/** Orçamento */
-use App\Http\Livewire\Orcamento\ExibirOrcamento;
-
 /** Processo */
 use App\Http\Livewire\Processo\ExibirProcesso;
 
 /** Região */
-use App\Http\Livewire\Regiao\ListarRegiao;
+use App\Http\Livewire\Regiao\ExibirRegiao;
 
 /** Utilizador */
 use App\Http\Livewire\Utilizador\CriarUtilizador;
@@ -60,15 +57,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/departamento', ExibirDepartamento::class)->name('exibir-departamento');
     Route::get('/departamentos', ExibirDepartamento::class)->name('listar-departamento');
 
-    // Orçamento
-    Route::get('/orcamento', ExibirOrcamento::class)->name('exibir-orcamento');
-
     // Processo
     Route::get('/processo', ExibirProcesso::class)->name('avaliar-processo');
     Route::get('/processos', ExibirProcesso::class)->name('listar-processo');
 
-    // Região
-    Route::get('/regiao', ListarRegiao::class)->name('listar-regiao');
+    // Orçamento / Região 
+    Route::get('/orcamento', ExibirRegiao::class)->name('exibir-orcamento');
+    Route::get('/regiao', ExibirRegiao::class)->name('listar-regiao');
 
     // Utilizador
     Route::get('/utilizador', ListarUtilizador::class)->name('listar-utilizador');
