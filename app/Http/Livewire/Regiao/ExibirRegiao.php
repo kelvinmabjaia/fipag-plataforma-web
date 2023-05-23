@@ -14,7 +14,7 @@ class ExibirRegiao extends Component
     public function mount()
     {
         if( str_contains(Route::currentRouteName(), 'orcamento') )
-            $this->regiao = Regiao::where('id', 2)->first();
+            $this->regiao = Regiao::where('id', 3)->first();
     }
 
     public function render()

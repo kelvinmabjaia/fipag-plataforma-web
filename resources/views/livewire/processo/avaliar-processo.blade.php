@@ -24,9 +24,9 @@
                                 Aprovar
                             </button>
 
-                            <button type="button" class="btn bg-gradient-secondary mx-1">
+                            <button type="button" class="btn bg-gradient-secondary mx-1" data-bs-toggle="modal" data-bs-target="#modal-alocar">
                                 <span class="pe-2 mt-3"><i class="fas fa-share fa-lg mt-1" aria-hidden="true"></i></span>
-                                Encaminhar
+                                Pedir Alocação
                             </button>
                         </div>
                         
@@ -37,6 +37,49 @@
             </div>
         </div>
         
+    </div>
+
+    <div class="col-md-4">
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-alocar" tabindex="-1" role="dialog" aria-labelledby="modal-alocar" aria-hidden="true" >
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-0">
+                <div class="card card-plain">
+
+                    <div class="card-header text-left">
+                        <h5 class="font-weight-bolder text-dark text-gradient">Criar Utilizador</h5>
+                        <p class="mb-0">Enter your email and password to sign in</p>
+                    </div>
+                    
+                    <div class="card-body py-0">
+                    
+                        
+                    
+                    </div>
+                    
+                    <div class="card-footer text-center px-lg-2 px-1">
+                    
+                        <p class="text-sm text-muted mx-auto">
+                            Formulário feito com <i style="font-size: .65rem" class="ni ni-favourite-28"></i> pela
+                            <a href="javascript:;" class="text-info text-dark font-weight-bold">FastTech</a>
+                        </p>
+                        
+                    </div>
+    
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Close Modal -->
+        <script>
+            document.addEventListener('closeCreateModal', () => {
+                $("#modal-criar-utilizador").modal('dispose'); // for cleaning a modal form
+            }); 
+        </script>
     </div>
 
     <div class="container-fluid">

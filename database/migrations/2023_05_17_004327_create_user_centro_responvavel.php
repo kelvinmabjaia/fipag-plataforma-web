@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cargos', function (Blueprint $table) {
+        Schema::create('user_centro_responvavel', function (Blueprint $table) {
             $table->id();
-            $table->integer('nivel');
-            $table->string('cargo')->unique();
-            $table->timestamps();
+            $table->string('user_id');
+                $table->foreign('user_id')->references('email')->on('users');
+            $table->string('centro');
+            $table->string('ano');
+            $table->boolean('responsavel')->default(false);
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cargos');
+        Schema::dropIfExists('user_centro_responvavel');
     }
 };

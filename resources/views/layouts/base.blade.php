@@ -22,6 +22,8 @@
     <script defer src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Alpine -->
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+    {{-- Selec2 cdn --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
     <style> [x-cloak] { display: none !important; } </style>
     @livewireStyles
@@ -52,6 +54,17 @@
     <!-- Jquey -->
     <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script defer src="assets/js/soft-ui-dashboard.js"></script>
+      <!-- Select2 JS File -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript">
+        $(".formselect").select2({
+            placeholder: "Selecione",
+            width: 'resolve',
+            allowClear: true
+        });
+    </script>
+        
     @livewireScripts
     {{-- @livewire('livewire-ui-modal') --}}
 </body>

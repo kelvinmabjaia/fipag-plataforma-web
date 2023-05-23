@@ -12,8 +12,8 @@
                                 <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                                 <div class="d-flex flex-column">
                                 <h1 class="mb-3 text-sm">Região {{ $regiao->regiao }}</h1>
-                                <span class="mb-2 text-xs">Director: <span class="text-dark font-weight-bold ms-2">Viking Burrito</span></span>
-                                <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-2 font-weight-bold">oliver@burrito.com</span></span>
+                                <span class="mb-2 text-xs">Director: <span class="text-dark font-weight-bold ms-2">...</span></span>
+                                <span class="mb-2 text-xs">Email Address: <span class="text-dark ms-2 font-weight-bold">...</span></span>
                                 </div>
                                 </li>
                             </ul>
@@ -68,7 +68,7 @@
                                         <i class="ni ni-archive-2 text-dark"></i>
                                     </span>
                                     <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Derpatamento x  
+                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Sede x  
                                             <span class="text-muted text-sm"> Processo #1024 </span> </h6>
                                         <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
                                         <p class="text-xs mt-3 mb-2">
@@ -83,7 +83,7 @@
                                         <i class="ni ni-fat-remove text-danger text-gradient"></i>
                                     </span>
                                     <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Derpatamento x  
+                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Filial 001 x  
                                             <span class="text-muted text-sm"> Processo #1024 </span> </h6>
                                         <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 4:54 PM</p>
                                         <p class="text-xs mt-3 mb-2">
@@ -98,7 +98,7 @@
                                         <i class="ni ni-curved-next text-warning text-gradient"></i>
                                     </span>
                                     <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Derpatamento x  
+                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Sede x  
                                             <span class="text-muted text-sm"> Processo #1024 </span> </h6>
                                             <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 4:54 PM</p>
                                             <p class="text-xs mt-3 mb-2">

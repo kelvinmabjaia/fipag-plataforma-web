@@ -38,20 +38,36 @@
                 </a>
             </li>
 
-            {{-- Lista de Pocessos --}}
+            {{-- Lista de Requisição --}}
             <li class="nav-item pb-3">
 
-                <?php $collapse = in_array(Route::currentRouteName(), array('avaliar-processo', 'listar-processo')); ?>
+                <?php $collapse = in_array(Route::currentRouteName(), array('criar-requisicao' ,'listar-requisicao', 'avaliar-requisicao')); ?>
 
                 <a class="nav-link {{ $collapse == 'tables' ? 'active' : '' }}"
-                    href="{{ route('listar-processo') }}">
+                    href="{{ route('listar-requisicao') }}">
                     <div
                         class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-copy-04 text-sm opacity-10" aria-hidden="true"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Processos</span>
+                    <span class="nav-link-text ms-1">Requisição</span>
                 </a>
             </li>
+
+            {{-- Lista de Pocessos 
+                <li class="nav-item pb-3">
+
+                    <php $collapse = in_array(Route::currentRouteName(), array('avaliar-processo', 'listar-processo')); ?>
+
+                    <a class="nav-link {{ $collapse == 'tables' ? 'active' : '' }}"
+                        href="{{ route('listar-processo') }}">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-single-copy-04 text-sm opacity-10" aria-hidden="true"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Processos</span>
+                    </a>
+                </li>
+            --}}
 
             {{-- LAYBEL Gestão --}}
             <li class="nav-item mt-3">

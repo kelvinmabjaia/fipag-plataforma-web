@@ -25,7 +25,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // USER PERTENCE A ...
-    public function cargo() { return $this->belongsTo(Cargo::class, 'cargo_id', 'nivel'); }
+    public function Centros(){
+        return $this->hasMany(UserCentros::class, 'user_id', 'email');
+    }
     
 }
